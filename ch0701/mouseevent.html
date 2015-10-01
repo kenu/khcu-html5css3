@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mouse Event</title>
+    <link rel="stylesheet" href="mouseevent.css">
+</head>
+
+<body>
+    <a name="TRAVEL"></a>
+    <h2>여행한 나라</h2>
+    <div id="travel">
+        <ul>
+            <li>
+                <img class="thumbnail" src="imgs/resize/img1.jpg" onclick="document.getElementById('bigimg').src='imgs/img1.jpg'">
+            </li>
+            <li>
+                <img class="thumbnail" src="imgs/resize/img2.jpg" onclick="document.getElementById('bigimg').src='imgs/img2.jpg'">
+            </li>
+            <li>
+                <img class="thumbnail" src="imgs/resize/img3.jpg" onclick="document.getElementById('bigimg').src='imgs/img3.jpg'">
+            </li>
+        </ul>
+        <div id="large">
+            <img id="bigimg" src="imgs/img1.jpg" >
+        </div>
+    </div>
+
+</body>
+
+</html>

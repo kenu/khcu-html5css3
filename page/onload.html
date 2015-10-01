@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Key Code</title>
+    <script>
+        var log;
+        function init() {
+            log = document.getElementById("log");
+        }
+
+        function kdown(e) {
+            var code = e.keyCode;
+            log.innerHTML += String.fromCharCode(code) 
+                             + "(" + code + ") pressed<br>";
+        }
+
+        window.onload = init;
+    </script>
+</head>
+
+<body>
+    <input type="text" onkeydown="kdown(event)">
+    <div id="log"></div>
+</body>
+
+</html>

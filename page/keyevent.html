@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Key Event</title>
+    </head>
+    <body>
+        <input type="text" onkeyup="kup()"
+               onkeydown="kdown()"
+               onkeypress="kpress()">
+        <div id="log"></div>
+        <script>
+            var log = document.getElementById("log");
+
+            function kup() {
+                log.innerHTML += "up<br>";
+            }
+            function kdown() {
+                log.innerHTML += "down<br>";
+            }
+            function kpress() {
+                log.innerHTML += "press<br>";
+            }
+        </script>
+    </body>
+</html>

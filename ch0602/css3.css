@@ -1,0 +1,389 @@
+.container {
+    margin-bottom: 300px !important;
+}
+#animation .container {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    border: 1px solid #ddd;
+    position: relative;
+}
+#animation div.space {
+    margin: 10px auto;
+    width: 260px;
+    height: 180px;
+    position: relative;
+    display: block;
+    background-color: #336;
+}
+#animation .planet {
+    background-color: #f00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(imgs/sun.png) no-repeat center center;
+}
+.rocket {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(imgs/rocket.png) no-repeat 60px center;
+    /* Chrome still requires the -webkit- prefix */
+    -webkit-animation: orbit 10s linear infinite;
+    animation: orbit 10s linear infinite;
+    transition: background-position 0.8s;
+}
+@-webkit-keyframes orbit {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes orbit {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#animation .container:active .rocket {
+    background-position: 75px center;
+}
+/* calc */
+
+#calc .container {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#calc .container .banner {
+    width: calc(100% - 60px);
+    margin: 10px auto;
+    text-align: center;
+    background-color: #cbd0ff;
+    vertical-align: middle;
+    line-height: 60px;
+}
+/* advselector */
+
+#advselector .container {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#advselector .elem {
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    background-color: #A0DFAC;
+    float: left;
+}
+#advselector .elem span {
+    position: relative;
+    display: block;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #000;
+}
+#advselector .elem:nth-child(odd) {
+    border-radius: 50%;
+}
+#advselector .elem:nth-of-type(3) {
+    background-color: #DFACA0;
+}
+#advselector .elem:nth-last-child(2) {
+    background-color: #df00df;
+}
+#advselector .elem[data-foo^=bar] {
+    background-color: #aaa;
+}
+/* generate */
+
+#generate .container {
+    width: 80%;
+    height: 140px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    position: relative;
+
+    counter-reset: cnt;
+}
+#generate .container::before {
+    display: block;
+    content: 'Hover over these items:';
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+}
+#generate .container div {
+    width: 80px;
+    height: 20px;
+    background-color: #eef;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+}
+#generate .container div::after{
+	counter-increment: cnt;
+	content:" #" counter(cnt);
+	display:inline-block;
+}
+#generate .container div::before {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    content: attr(data-type);
+    opacity: 0;
+    /* Animate the transitions */
+    -webkit-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+#generate .container div:hover::before {
+    opacity: 1;
+}
+/* gradient */
+
+#gradient .container {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+#gradient .container div {
+    width: 90px;
+    height: 90px;
+    display: inline-block;
+    margin: 2px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5) inset, 0 3px 3px #DDD;
+    border-radius: 5px;
+    color: #666;
+    vertical-align: top;
+    line-height: 230px;
+    font-size: 12px;
+}
+#elg1 {
+    background: linear-gradient(to right, #8dd2ff, #ffffff);
+}
+#elg2 {
+    background: radial-gradient(#ff8888, #c1467b);
+}
+#elg3 {
+    background: repeating-linear-gradient(-45deg, red, orange, yellow 10%, white 5px, white 15%);
+}
+#elg4 {
+    background: repeating-radial-gradient(#00ddff, #00ddff 5px, white 5px, white 10px);
+}
+/* webfont */
+
+#webfont .container {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+#webfont .container h1 {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 5px;
+}
+#webfont .container h1.satisfy {
+    font-family: Satisfy, cursive;
+}
+.container .ng {
+    font-family: "nanumgothic", sans-serif;
+}
+#webfont .container h1.ngc {
+    font-family: 'Nanum Gothic Coding';
+}
+/* boxsizing */
+
+#boxsizing .container {
+    clear: both;
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+#boxsizing .container div {
+    width: 100px;
+    height: 60px;
+    display: inline-block;
+    background-color: #f0d0f0;
+    vertical-align: top;
+}
+#box2 {
+    padding: 10px;
+}
+#box3 {
+    padding: 10px;
+    border: 10px solid #cff;
+}
+/* borderimage */
+
+#borderimage .container {
+    width: 80%;
+    height: 110px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#borderimage .container p {
+    text-align: center;
+    padding: 15px;
+    width: 340px;
+    margin: 0 auto;
+    border: 30px solid transparent;
+    border-image: url(imgs/border.png) 30 30 round;
+}
+/* mediaquery */
+
+#mediaquery .container {
+    width: 80%;
+    height: 110px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+@media screen and (min-width: 624px) {
+    #mediaquery .container div {
+        margin: auto;
+        background-color: #ddf;
+        width: 70%;
+        height 200px;
+        float: left;
+        font-size: 4.0em;
+        padding-left: 20px;
+        transition: font-size 0.2s;
+    }
+    #mediaquery .container menu {
+        width: 15%;
+        height: 60px;
+        margin: 0;
+        padding: 0 10px;
+        margin-left: 10px;
+        float: left;
+        background-color: #ccf;
+    }
+}
+@media screen and (max-width: 624px) {
+    #mediaquery .container div {
+        margin: auto;
+        background-color: #fdd;
+        width: 90%;
+        height: 60px;
+        font-size: 2.0em;
+        text-align: center;
+        transition: font-size 0.2s;
+    }
+    #mediaquery .container menu {
+        width: 90%;
+        height: 40px;
+        margin: 10px auto;
+        padding: 0;
+        text-align: center;
+        background-color: #fcc;
+    }
+}
+/* multiplebg */
+
+#multiplebg .container {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#multiplebg .space {
+    background: url('imgs/rocket.png') no-repeat center 140px, url('imgs/space.jpg') no-repeat bottom center;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 3px;
+    transition: background-position 1s;
+}
+#multiplebg .space:hover {
+    background-position: 65% 20px, top right;
+}
+/* columns */
+
+#columns .container {
+    width: 80%;
+    height: 240px;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+#columns .container div {
+    -moz-columns: 3;
+    -webkit-columns: 3;
+    columns: 3;
+}
+#columns div p:first-child {
+    margin: 0;
+}
+/* 3dtransform */
+
+#transform .container {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+    border: 1px solid #ddd;
+    position: relative;
+}
+#transform .coin-head,
+#transform .coin-tail {
+    /* Enable 3D transforms */
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -100px;
+    background: url(imgs/coin.png) no-repeat left center;
+    transition: 0.8s;
+}
+#transform .coin-tail {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    background-position: right center;
+}
+#transform .container:hover .coin-head {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+#transform .container:hover .coin-tail {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+}
+#menu {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}

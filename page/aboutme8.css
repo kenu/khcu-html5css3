@@ -1,0 +1,98 @@
+h1 {
+    color: blue;
+    font-size: 3.0em;
+    font-family: Verdana;
+    text-align: center;
+    width: 640px;
+}
+div#aboutme {
+    width: 600px;
+    height: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+div#aboutme img {
+    width: 200px;
+    float: right;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+div#aboutme span {
+    color: blue;
+}
+#name {
+    color: blue;
+    font-size: 1.8em;
+}
+h2 {
+    color: blue;
+    font-size: 2.0em;
+    margin-bottom: 0;
+    clear: both;
+    border-bottom: 1px dashed #888;
+    width: 640px;
+}
+table {
+    background-color: #f0f0f0;
+    width: 600px;
+    border-collapse: collapse;
+}
+tr {
+    line-height: 200%;
+}
+th, td {
+    border: 1px solid #888;
+    background-color: #ddf;
+}
+td {
+    padding-left: 6px;
+}
+tr:nth-child(odd) td {
+    background-color: #eef;
+}
+tr:nth-child(even) td {
+    background-color: #fff;
+}
+td {
+    text-align: center;
+}
+td.tech,
+td.project {
+    text-align: left;
+}
+#travel, #project {
+    background-color: #f0f0f0;
+    width: 600px;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#travel li {
+    display: inline-block;
+}
+#travel img {
+    width: 160px;
+    height: 106px;
+    border: 1px solid #000;
+}
+#contact {
+    background-color: #f0f0f0;
+    width: 600px;
+    padding: 20px 0 20px 40px;
+    border-radius: 10px;
+}
+
+#aboutme,
+#project,
+#travel,
+#contact {
+    height: 550px;
+}
+#contact {
+    margin-bottom: 400px;
+}
+a[name] {
+    padding-top: 40px;
+    display: block;
+}

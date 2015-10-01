@@ -1,0 +1,1 @@
+{"connect":"SFTP","host":"okdevtv.com","port":"22","user":"dev","pwd":"okpassokpass12","savepwd":"checked","remoteRoot":"local/tomcat/webapps/h5c3","privateKeyFile":""}

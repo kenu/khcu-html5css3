@@ -1,0 +1,33 @@
+body, menu, ul {
+    padding: 0;
+    margin: 0;
+}
+menu {
+    width: 636px;
+    height: 30px;
+    border: 2px solid #00e;
+    background: #fff;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+}
+menu ul {
+    list-style: none;
+    text-align: center;
+    width: 410px;
+    vertical-align: top;
+    padding: 3px;
+    margin: auto;
+}
+menu li {
+    width: 100px;
+    padding: 2px 0;
+    text-align: center;
+    border: 1px solid #888;
+    background-color: #eeeeee;
+    float: left;
+    vertical-align: top;
+}
+menu li:hover {
+    background-color: #ffffee;
+}

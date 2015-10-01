@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Web Event</title>
+    <link rel="stylesheet" href="mouseevent.css">
+    <script>
+    function showImage1() {
+        document.getElementById('bigimg').src='imgs/img1.jpg';
+    }
+    function showImage2() {
+        document.getElementById('bigimg').src='imgs/img2.jpg';
+    }
+    function showImage3() {
+        document.getElementById('bigimg').src='imgs/img3.jpg';
+    }
+    
+    </script>
+</head>
+
+<body>
+    <a name="TRAVEL"></a>
+    <h2>여행한 나라</h2>
+    <div id="travel">
+        <ul>
+            <li>
+                <img class="thumbnail" src="imgs/resize/img1.jpg" onclick="showImage1()">
+            </li>
+            <li>
+                <img class="thumbnail" src="imgs/resize/img2.jpg" onclick="showImage2()">
+            </li>
+            <li>
+                <img class="thumbnail" src="imgs/resize/img3.jpg" onclick="showImage3()">
+            </li>
+        </ul>
+        <div id="large">
+            <img id="bigimg" src="imgs/img1.jpg" >
+        </div>
+    </div>
+
+</body>
+
+</html>
